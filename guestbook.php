@@ -58,10 +58,10 @@ try {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 //        checks voor een geldig email adress
         if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-            $email =  htmlspecialchars($_POST['email']);
-            $text = htmlspecialchars( $_POST['text']);
-            $admin = userIsAdmin($conn) ;
-           echo(userIsAdmin($conn));
+            $email = htmlspecialchars($_POST['email']);
+            $text = htmlspecialchars($_POST['text']);
+            $admin = userIsAdmin($conn);
+            echo(userIsAdmin($conn));
             if ($admin) {
                 $color = $_POST['color'];
             } else {
